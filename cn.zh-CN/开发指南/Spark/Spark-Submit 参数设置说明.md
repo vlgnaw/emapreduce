@@ -53,8 +53,8 @@
 | |yarn-cluster|等同于 –-master yarn —deploy-mode cluster， 此时不需要指定deploy-mode。|
 |deploy-mode|client|client 模式表示作业的 AM 会放在 Master 节点上运行。要注意的是，如果设置这个参数，那么需要同时指定上面 master 为 yarn。|
 | |cluster|cluster 模式表示 AM 会随机的在 worker 节点中的任意一台上启动运行。要注意的是，如果设置这个参数，那么需要同时指定上面 master 为yarn。|
-|driver-memory|4g|driver 使用的内存，不可超过单机的 core 总数。|
-|num-executors|2|创建多少个 executor。|
+|driver-memory|4g|driver 使用的内存。|
+|num-executors|2|创建多少个 executor。不可超过集群的 core 总数。|
 |executor-memory|2g|各个 executor 使用的最大内存，不可超过单机的最大可使用内存。|
 |executor-cores|2|各个 executor 使用的并发线程数目，也即每个 executor 最大可并发执行的 Task 数目。|
 
